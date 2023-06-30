@@ -1,45 +1,43 @@
 # Procedimiento de instalacion para Debian Linux 
 ## MODIFICACION DE PANTALLA
-### textos
+### STEP 01
 
-* Modificacion de tamano de pantalla
+
+## **Instalacion de neofetch**
 
 ~~~sh
-@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Integer idConsulta;
-	 
-	
-	//muchas consultas a 1 paciente
-	@ManyToOne
-	@JoinColumn(name = "id_pacientee",nullable = false, foreignKey = @ForeignKey (name = "Fk_consulta_paciente"))
-	private Paciente paciente
-
+sudo apt update
 ~~~
 
-```java
-@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Integer idConsulta;
-	 
-	
-	//muchas consultas a 1 paciente
-	@ManyToOne
-	@JoinColumn(name = "id_pacientee",nullable = false, foreignKey = @ForeignKey (name = "Fk_consulta_paciente"))
-	private Paciente paciente
+```sh
+sudo apt install neofetch
+```
+
+## **Virtual Box**
+
+~~~sh
+SH VBoxLinuxAdditions.run
+~~~
+
+```sh
+sudo apt install neofetch
 ```
 
 ```py
 @Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer idConsulta;
-	 
-	
-	//muchas consultas a 1 paciente
-	@ManyToOne
-	@JoinColumn(name = "id_pacientee",nullable = false, foreignKey = @ForeignKey (name = "Fk_consulta_paciente"))
-	private Paciente paciente
+
 ```
+
+
+
+
+
+
+
+
+
 //
 
 <a href="https://www.youtube.com/watch?v=QdnVT22LBBs
