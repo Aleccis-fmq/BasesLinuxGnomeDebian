@@ -1,34 +1,88 @@
 # Procedimiento de instalacion para Debian Linux 
-## MODIFICACION DE PANTALLA
-### STEP 01
+
+
 
 
 ## **Instalacion de neofetch**
 
 ~~~sh
-sudo apt update
+apt update
 ~~~
 
 ```sh
-sudo apt install neofetch
+apt install neofetch
 ```
 
-## **Virtual Box**
-
+## **Virtual Box Pantalla**
+#### configuracion previa antes de realizar la instalacion de virtual box adds 
 ~~~sh
-SH VBoxLinuxAdditions.run
+sh VBoxLinuxAdditions.run
 ~~~
 
+
+## **Lenguaje en imagen iso**
+#### configuracion previa antes de realizar la instalacion de virtual box adds 
+~~~sh
+RUN apt-get install -y locales locales-all
+ENV LC_ALL en_US.UTF-8
+ENV LANG en_US.UTF-8
+ENV LANGUAGE en_US.UTF-8
+~~~
+
+## **Permiso SU**
+#### asignar valor sudo al comando shell
+~~~sh
+nano /etc/sudoers
+~~~
+#### agregar el usuario a los prrivilegios
 ```sh
-sudo apt install neofetch
+alccs ALL=(ALL:ALL) ALL
 ```
 
-```py
-@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Integer idConsulta;
-
+## **Extensiones GNOME**
+#### asignar valor sudo al comando shell
+~~~sh
+FORGE
+SEARCH LIGHT
+TILING ASSITANT
+~~~
+#### Instalacion de git
+```sh
+apt install git
 ```
+```sh
+git --version
+```
+
+## **Instalacion fish**
+#### Shell fish
+~~~sh
+sudo apt-get update && sudo apt-get install fish
+~~~
+#### Uso
+~~~sh
+fish
+~~~
+#### Navegador para configuracion
+~~~sh
+fish_config
+~~~
+#### Deshabilitar saludo
+~~~sh
+vi ~/.config/fish/config.fish
+~~~
+#### Agregar este codigo
+~~~sh
+set -g -x fish_greeting 'Halo'
+~~~
+#### Agregar como predeterminado
+~~~sh
+chsh -s /usr/bin/fish
+~~~
+#### Verificar el cambio direccion de instalacion
+~~~sh
+nano /etc/shells
+~~~
 
 
 
