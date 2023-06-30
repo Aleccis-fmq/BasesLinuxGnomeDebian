@@ -34,13 +34,13 @@ ENV LANGUAGE en_US.UTF-8
 ~~~sh
 nano /etc/sudoers
 ~~~
-#### agregar el usuario a los prrivilegios
+#### Agregar el usuario a los prrivilegios
 ```sh
 alccs ALL=(ALL:ALL) ALL
 ```
 
 ## **Extensiones GNOME**
-#### asignar valor sudo al comando shell
+#### Asignar valor sudo al comando shell
 ~~~sh
 FORGE
 SEARCH LIGHT
@@ -84,6 +84,38 @@ chsh -s /usr/bin/fish
 nano /etc/shells
 ~~~
 
+## **Instalacion SublimeText**
+#### Agregar clave GPG
+~~~sh
+wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add -
+~~~
+#### Agregar repositorio
+~~~sh
+echo "deb https://download.sublimetext.com/ apt/stable/" | sudo tee /etc/apt/sources.list.d/sublime-text.list
+~~~
+#### Actualizar Paquetes
+~~~sh
+sudo apt update
+~~~
+
+#### Instalacion
+~~~sh
+sudo apt install sublime-text
+~~~
+#### Abrir sublime
+~~~sh
+subl
+~~~
+
+## **Instalacion java**
+#### Por defecto
+~~~sh
+sudo apt install default-jdk
+~~~
+#### Probar
+~~~sh
+java --version
+~~~
 
 
 
